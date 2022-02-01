@@ -29,7 +29,7 @@ class _SearchBarPageState extends State<SearchBarPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey,
+      backgroundColor: Colors.white,
       appBar: AppBar(),
       body: Column(
         children: [
@@ -81,31 +81,6 @@ class _SearchBarPageState extends State<SearchBarPage> {
               child: const Text('Rate'),
             ),
             onChanged: (double rating) {},
-          ),
-          Container(
-            height: 50,
-            width: MediaQuery.of(context).size.width,
-            margin: const EdgeInsets.all(20),
-            child: DropdownButtonHideUnderline(
-              child: GFDropdown(
-                padding: const EdgeInsets.all(15),
-                borderRadius: BorderRadius.circular(5),
-                border: const BorderSide(color: Colors.black12, width: 1),
-                dropdownButtonColor: Colors.white,
-                value: dropdown,
-                onChanged: (newValue) {
-                  setState(() {
-                    //dropdown = newValue;
-                  });
-                },
-                items: list
-                    .map((value) => DropdownMenuItem(
-                          value: value,
-                          child: Text(value),
-                        ))
-                    .toList(),
-              ),
-            ),
           ),
         ],
       ),
